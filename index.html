@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrinho - Soluções Agrícolas Modernas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(39,174,96,0.9) 0%, rgba(33,150,83,0.9) 100%);
+        }
+        
+        .crop-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .stats-item {
+            transition: all 0.3s ease;
+        }
+        
+        .stats-item:hover {
+            transform: scale(1.05);
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #27ae60;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <img src="https://via.placeholder.com/50" alt="Agrinho Logo" class="h-10 w-10 mr-2">
+                    <span class="text-xl font-bold text-green-600">Agrinho</span>
+                </div>
+                
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-green-600 font-medium">Início</a>
+                    <a href="#services" class="nav-link text-gray-700 hover:text-green-600 font-medium">Serviços</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-green-600 font-medium">Sobre</a>
+                    <a href="#products" class="nav-link text-gray-700 hover:text-green-600 font-medium">Produtos</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-green-600 font-medium">Contato</a>
+                </nav>
+                
+                <div class="flex items-center space-x-4">
+                    <button class="md:hidden text-gray-700">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                    <button class="hidden md:block bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-medium transition duration-300">
+                        <i class="fas fa-user mr-2"></i>Área do Cliente
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white py-20">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Transformando a Agricultura com Tecnologia</h1>
+                    <p class="text-xl mb-8">Soluções inovadoras para aumentar sua produtividade e sustentabilidade no campo.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <button class="bg-white text-green-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-bold transition duration-300">
+                            <i class="fas fa-play mr-2"></i>Conheça nosso trabalho
+                        </button>
+                        <button class="border-2 border-white hover:bg-white hover:text-green-600 px-6 py-3 rounded-lg font-bold transition duration-300">
+                            <i class="fas fa-phone-alt mr-2"></i>Fale conosco
+                        </button>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="https://via.placeholder.com/500x400" alt="Agricultura moderna" class="rounded-lg shadow-xl animate-float">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="stats-item bg-gray-50 p-6 rounded-lg text-center">
+                    <div class="text-green-600 text-4xl mb-2">
+                        <i class="fas fa-tractor"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold text-gray-800">1,200+</h3>
+                    <p class="text-gray-600">Fazendas Atendidas</p>
+                </div>
+                <div class="stats-item bg-gray-50 p-6 rounded-lg text-center">
+                    <div class="text-green-600 text-4xl mb-2">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold text-gray-800">50+</h3>
+                    <p class="text-gray-600">Cultivos Diferentes</p>
+                </div>
+                <div class="stats-item bg-gray-50 p-6 rounded-lg text-center">
+                    <div class="text-green-600 text-4xl mb-2">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold text-gray-800">85+</h3>
+                    <p class="text-gray-600">Especialistas</p>
+                </div>
+                <div class="stats-item bg-gray-50 p-6 rounded-lg text-center">
+                    <div class="text-green-600 text-4xl mb-2">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold text-gray-800">15+</h3>
+                    <p class="text-gray-600">Estados Atendidos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="text-green-600 font-bold">NOSSOS SERVIÇOS</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2">Soluções Completas para o Agronegócio</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-4">Oferecemos uma gama completa de serviços para atender todas as necessidades da sua propriedade rural.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-green-600 text-4xl mb-4">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Consultoria Agronômica</h3>
+                    <p class="text-gray-600">Assessoria técnica especializada para maximizar sua produtividade com sustentabilidade.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-green-600 text-4xl mb-4">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Irrigação Inteligente</h3>
+                    <p class="text-gray-600">Sistemas automatizados que economizam água e aumentam a eficiência da irrigação.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-green-600 text-4xl mb-4">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Gestão de Propriedade</h3>
+                    <p class="text-gray-600">Software completo para gerenciamento financeiro e operacional da sua fazenda.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-green-600 text-4xl mb-4">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Agricultura de Precisão</h3>
+                    <p class="text-gray-600">Tecnologia de ponta com drones, sensores e análise de dados para tomada de decisão.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-green-600 text-4xl mb-4">
+                        <i class="fas fa-shopping-basket"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Comercialização</h3>
+                    <p class="text-gray-600">Auxílio na venda e escoamento da produção com melhores preços de mercado.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-green-600 text-4xl mb-4">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Certificações</h3>
+                    <p class="text-gray-600">Preparação para certificações orgânicas, sustentáveis e de qualidade.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-10">
+                    <img src="https://via.placeholder.com/600x400" alt="Sobre a Agrinho" class="rounded-lg shadow-xl">
+                </div>
+                <div class="lg:w-1/2">
+                    <span class="text-green-600 font-bold">SOBRE NÓS</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2 mb-6">Inovação e Tradição no Campo</h2>
+                    <p class="text-gray-600 mb-6">A Agrinho nasceu da união entre o conhecimento tradicional do campo e as mais modernas tecnologias agrícolas. Nossa missão é levar inovação para o agronegócio brasileiro, tornando as propriedades rurais mais produtivas, sustentáveis e lucrativas.</p>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start">
+                            <div class="text-green-600 mt-1 mr-3">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Equipe Qualificada</h4>
+                                <p class="text-gray-600">Engenheiros agrônomos, técnicos agrícolas e especialistas em tecnologia agrícola.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-green-600 mt-1 mr-3">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Resultados Comprovados</h4>
+                                <p class="text-gray-600">Aumento médio de 30% na produtividade dos nossos clientes.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-green-600 mt-1 mr-3">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Tecnologia de Ponta</h4>
+                                <p class="text-gray-600">Parcerias com as principais empresas de tecnologia agrícola do mundo.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-bold transition duration-300">
+                        <i class="fas fa-book-open mr-2"></i>Conheça nossa história
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="text-green-600 font-bold">NOSSOS PRODUTOS</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2">Insumos de Alta Qualidade</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-4">Selecionamos os melhores produtos do mercado para garantir o máximo desempenho da sua lavoura.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="crop-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 bg-green-100 flex items-center justify-center">
+                        <img src="https://via.placeholder.com/300x200" alt="Sementes" class="h-full w-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Sementes Premium</h3>
+                        <p class="text-gray-600 mb-4">Variedades de alto potencial genético e adaptadas às diferentes regiões.</p>
+                        <button class="text-green-600 font-medium hover:text-green-700 transition duration-300">
+                            Saiba mais <i class="fas fa-arrow-right ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="crop-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 bg-green-100 flex items-center justify-center">
+                        <img src="https://via.placeholder.com/300x200" alt="Fertilizantes" class="h-full w-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Fertilizantes Especiais</h3>
+                        <p class="text-gray-600 mb-4">Formulações balanceadas para cada fase do desenvolvimento vegetal.</p>
+                        <button class="text-green-600 font-medium hover:text-green-700 transition duration-300">
+                            Saiba mais <i class="fas fa-arrow-right ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="crop-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 bg-green-100 flex items-center justify-center">
+                        <img src="https://via.placeholder.com/300x200" alt="Defensivos" class="h-full w-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Defensivos Biológicos</h3>
+                        <p class="text-gray-600 mb-4">Controle de pragas e doenças com produtos sustentáveis e eficientes.</p>
+                        <button class="text-green-600 font-medium hover:text-green-700 transition duration-300">
+                            Saiba mais <i class="fas fa-arrow-right ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="crop-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 bg-green-100 flex items-center justify-center">
+                        <img src="https://via.placeholder.com/300x200" alt="Equipamentos" class="h-full w-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Equipamentos</h3>
+                        <p class="text-gray-600 mb-4">Tecnologia agrícola para todas as escalas de produção.</p>
+                        <button class="text-green-600 font-medium hover:text-green-700 transition duration-300">
+                            Saiba mais <i class="fas fa-arrow-right ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-bold transition duration-300">
+                    <i class="fas fa-store mr-2"></i>Visite nossa loja virtual
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="text-green-600 font-bold">DEPOIMENTOS</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2">O que dizem nossos clientes</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-4">A satisfação dos nossos clientes é o nosso maior orgulho.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="testimonial-card bg-gray-50 p-8 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6">"A consultoria da Agrinho transformou nossa propriedade. Em um ano aumentamos a produtividade em 40% com os mesmos recursos."</p>
+                    <div class="flex items-center">
+                        <img src="https://via.placeholder.com/50" alt="Cliente" class="h-12 w-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">João Silva</h4>
+                            <p class="text-gray-600 text-sm">Produtor de Soja - MT</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-gray-50 p-8 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6">"O sistema de irrigação inteligente reduziu nosso consumo de água em 35% sem prejudicar a produção. Excelente investimento!"</p>
+                    <div class="flex items-center">
+                        <img src="https://via.placeholder.com/50" alt="Cliente" class="h-12 w-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Maria Oliveira</h4>
+                            <p class="text-gray-600 text-sm">Fruticultora - SP</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card bg-gray-50 p-8 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6">"A equipe da Agrinho nos ajudou a obter a certificação orgânica, abrindo novos mercados para nossos produtos."</p>
+                    <div class="flex items-center">
+                        <img src="https://via.placeholder.com/50" alt="Cliente" class="h-12 w-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Carlos Mendes</h4>
+                            <p class="text-gray-600 text-sm">Produtor Orgânico - MG</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-green-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Pronto para transformar sua propriedade?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Entre em contato conosco e descubra como podemos ajudar a levar sua produção para o próximo nível.</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <button class="bg-white text-green-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-bold transition duration-300">
+                    <i class="fas fa-phone-alt mr-2"></i>(00) 1234-5678
+                </button>
+                <button class="border-2 border-white hover:bg-white hover:text-green-600 px-8 py-3 rounded-lg font-bold transition duration-300">
+                    <i class="fas fa-envelope mr-2"></i>contato@agrinho.com.br
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row">
+                <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-10">
+                    <span class="text-green-600 font-bold">CONTATO</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2 mb-6">Fale conosco</h2>
+                    <p class="text-gray-600 mb-8">Tem dúvidas ou quer saber mais sobre nossos serviços? Preencha o formulário ou entre em contato pelos nossos canais.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="text-green-600 mt-1 mr-4">
+                                <i class="fas fa-map-marker-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Endereço</h4>
+                                <p class="text-gray-600">Rua das Fazendas, 1234 - Centro<br>Campo Grande/MS - CEP 79000-000</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-green-600 mt-1 mr-4">
+                                <i class="fas fa-phone-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Telefone</h4>
+                                <p class="text-gray-600">(67) 1234-5678<br>(67) 98765-4321 (WhatsApp)</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-green-600 mt-1 mr-4">
+                                <i class="fas fa-envelope text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">E-mail</h4>
+                                <p class="text-gray-600">contato@agrinho.com.br<br>comercial@agrinho.com.br</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-bold text-gray-800 mb-4">Siga-nos</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-green-600 hover:bg-green-700 text-white h-10 w-10 rounded-full flex items-center justify-center transition duration-300">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="bg-green-600 hover:bg-green-700 text-white h-10 w-10 rounded-full flex items-center justify-center transition duration-300">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="bg-green-600 hover:bg-green-700 text-white h-10 w-10 rounded-full flex items-center justify-center transition duration-300">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="bg-green-600 hover:bg-green-700 text-white h-10 w-10 rounded-full flex items-center justify-center transition duration-300">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <form class="bg-white p-8 rounded-xl shadow-md">
+                        <div class="mb-6">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Nome Completo</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent">
+                        </div>
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">E-mail</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent">
+                        </div>
+                        <div class="mb-6">
+                            <label for="phone" class="block text-gray-700 font-medium mb-2">Telefone</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent">
+                        </div>
+                        <div class="mb-6">
+                            <label for="subject" class="block text-gray-700 font-medium mb-2">Assunto</label>
+                            <select id="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent">
+                                <option value="">Selecione um assunto</option>
+                                <option value="consultoria">Consultoria Agronômica</option>
+                                <option value="produtos">Produtos Agrícolas</option>
+                                <option value="tecnologia">Tecnologia Agrícola</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Mensagem</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-bold transition duration-300">
+                            <i class="fas fa-paper-plane mr-2"></i>Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="https://via.placeholder.com/40" alt="Agrinho Logo" class="h-8 w-8 mr-2">
+                        <span class="text-xl font-bold">Agrinho</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Tecnologia e inovação para o agronegócio brasileiro.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Links Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition duration-300">Início</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition duration-300">Serviços</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition duration-300">Sobre Nós</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-white transition duration-300">Produtos</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-300">Contato</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Serviços</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Consultoria</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Agricultura de Precisão</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Irrigação</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Gestão Rural</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Certificações</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Assine nossa newsletter para receber novidades e dicas sobre agricultura.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Seu e-mail" class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-800 w-full">
+                        <button type="submit" class="bg-green-600 hover:bg-green-700 px-4 py-2 rounded-r-lg">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Agrinho. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-6 right-6 bg-green-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Back to Top Button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Mobile Menu Toggle (would need implementation)
+        // Form Submission (would need backend integration)
+        // Smooth Scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
